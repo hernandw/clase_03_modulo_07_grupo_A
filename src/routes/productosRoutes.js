@@ -1,5 +1,5 @@
 import express from 'express'
-import { listarProductos, home } from '../controllers/productosController.js'
+import { listarProductos, home, vendido } from '../controllers/productosController.js'
 
 const router = express.Router()
 
@@ -7,6 +7,7 @@ const router = express.Router()
 
 router.get('/', home)
 router.get('/productos', listarProductos)
+router.post('/vender/:id', vendido)
 
 
 export default router

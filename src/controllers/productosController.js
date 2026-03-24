@@ -1,4 +1,4 @@
-import { obtenerProductosActivos } from "../models/productosModel.js";
+import { obtenerProductosActivos, venderProductos } from "../models/productosModel.js";
 
 const home = (req, res) => {
   try {
@@ -24,4 +24,18 @@ const listarProductos = async (req, res) => {
   }
 };
 
-export { listarProductos, home };
+
+const vendido = async(req, res)=>{
+  const id = req.params.id
+  try {
+    const producto = await venderProductos(id)
+    res.render("productos/resultado", {
+      pageTitle: "Productos"
+    })
+  } catch (error) {
+    
+  }
+}
+
+
+export { listarProductos, home, vendido };
