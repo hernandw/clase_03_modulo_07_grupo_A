@@ -1,0 +1,23 @@
+{
+  "name": "clase_03_grupo_a",
+  "version": "1.0.0",
+  "description": "Breve descripción del proyecto y su objetivo.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --env-file=.env ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "keywords": [],
+  "author": "Williams Hernandez",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.6",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1",
+    "nodemon": "^3.1.14"
+  }
+}
