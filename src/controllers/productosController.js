@@ -28,10 +28,12 @@ const listarProductos = async (req, res) => {
 const vendido = async(req, res)=>{
   const id = req.params.id
   try {
-    const producto = await venderProductos(id)
-    res.render("productos/resultado", {
-      pageTitle: "Productos"
-    })
+    const producto = await venderProducto(id);
+
+    res.render('productos/resultado', {
+      exito: true,
+      mensaje: `Producto "${producto.nombre}" vendido correctamente.`
+    });
   } catch (error) {
     
   }
